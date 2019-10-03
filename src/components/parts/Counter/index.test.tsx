@@ -8,7 +8,7 @@ afterEach(cleanup)
 describe('Counter', () => {
   it('increment', () => {
     const { getByText, getByTestId, container, asFragment } = render(
-      <Counter count={1} onIncrement={() => {}} />
+      <Counter count={2} onIncrement={() => {}} />
     )
     fireEvent.click(getByText(/counter/i))
     expect(getByText(/counter/i)).toHaveTextContent('3')
